@@ -70,7 +70,7 @@ for(j in 1:17){
 }
 cor_vector
 sig_vector
-png(filename="FigS4.png",width=12,height=16,units="in",res=600)
+png(filename="FigS5.png",width=12,height=16,units="in",res=600)
 grid.arrange(grobs=plots,ncol=3)
 dev.off()
 
