@@ -36,7 +36,7 @@ df <- data.frame(gene_pairs=c("Linked", "Unlinked"),
                  ratio=c(220822/383289,3114144/6236052))
 df$bar_order <- factor(df$gene_pairs, as.character(df$gene_pairs))
 p_value<-c("p=3e-13","p=0.28")
-png(filename="FigS1a",width=10,height=6,units="in",res=600)
+png(filename="FigS2a",width=10,height=6,units="in",res=600)
 ggplot(data=df, aes(x=bar_order, y=ratio)) +
   geom_bar(stat="identity",width=0.3)+
   coord_cartesian(ylim=c(0.4,0.6))+
@@ -62,7 +62,8 @@ for(i in 1:100){
 
 Dat<-data.frame(Distance/1000000,Cor_increase)
 names(Dat)<-c("TSS_distance","Correlation_increase")
-png(filename="FigS1b",width=10,height=6,units="in",res=600)
+Dat<-read.table(file="DatS2b",sep="\t",header=TRUE)
+png(filename="FigS2b",width=10,height=6,units="in",res=600)
 ggplot(Dat,aes(x=TSS_distance,y=Correlation_increase))+
   geom_point()+
   geom_smooth(method="lm",se=FALSE)+
@@ -112,7 +113,7 @@ df <- data.frame(gene_pairs=c("Linked", "Unlinked"),
                  ratio=c(276266/433911,3543033/7052604))
 df$bar_order <- factor(df$gene_pairs, as.character(df$gene_pairs))
 p_value<-c("p=3e-13","p=0.28")
-png(filename="FigS1C",width=10,height=6,units="in",res=600)
+png(filename="FigS2C",width=10,height=6,units="in",res=600)
 ggplot(data=df, aes(x=bar_order, y=ratio)) +
   geom_bar(stat="identity",width=0.3)+
   coord_cartesian(ylim=c(0.4,0.65))+
@@ -138,7 +139,8 @@ for(i in 1:100){
 
 Dat<-data.frame(Distance/1000000,Cor_increase)
 names(Dat)<-c("TSS_distance","Correlation_increase")
-png(filename="FigS1d",width=10,height=6,units="in",res=600)
+Dat<-read.table(file="DatS2d",sep="\t",header=TRUE)
+png(filename="FigS2d",width=10,height=6,units="in",res=600)
 ggplot(Dat,aes(x=TSS_distance,y=Correlation_increase))+
   geom_point()+
   geom_smooth(method="lm",se=FALSE)+
