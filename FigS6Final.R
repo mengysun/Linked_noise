@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
 Dat<-read.table(file="../Data_needed/Capture_efficiency_100Single",sep="\t",header=TRUE)
-png(filename="FigS5a.png",width=10,height=10,units="in",res=600)
+png(filename="FigS6a.png",width=10,height=10,units="in",res=600)
 ggplot(Dat, aes(x = cor_assigned, y = cor_generated)) + 
   geom_point() +
   stat_smooth(method = "lm", col = "red")+
@@ -19,7 +19,7 @@ dev.off()
 ##################################################################################################
 #FigS5b
 Dat<-read.table(file="../Data_needed/Capture_efficiency_100",sep="\t",header=TRUE)
-png(filename="FigS5b.png",width=10,height=10,units="in",res=600)
+png(filename="FigS6b.png",width=10,height=10,units="in",res=600)
 ggplot(Dat, aes(x = cor_assigned, y = cor_estimated)) + 
   geom_point() +
   stat_smooth(method = "lm", col = "red")+
@@ -38,7 +38,7 @@ dev.off()
 ####################################################################################################
 #FigS5c
 Dat<-read.table(file="../Data_needed/Capture_efficiency_10Single",sep="\t",header=TRUE)
-png(filename="FigS5c.png",width=10,height=10,units="in",res=600)
+png(filename="FigS6c.png",width=10,height=10,units="in",res=600)
 ggplot(Dat, aes(x = cor_assigned, y = cor_estimated)) + 
   geom_point() +
   stat_smooth(method = "lm", col = "red")+
@@ -55,7 +55,7 @@ ggplot(Dat, aes(x = cor_assigned, y = cor_estimated)) +
 dev.off()
 ####################################################################################################
 Dat<-read.table(file="../Data_needed/Capture_efficiency_10",sep="\t",header=TRUE)
-png(filename="FigS5d.png",width=10,height=10,units="in",res=600)
+png(filename="FigS6d.png",width=10,height=10,units="in",res=600)
 ggplot(Dat, aes(x = cor_assigned, y = cor_estimated)) + 
   geom_point() +
   stat_smooth(method = "lm", col = "red")+
