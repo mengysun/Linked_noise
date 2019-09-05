@@ -57,7 +57,7 @@ True_delta<-(cor_assigned1-cor_assigned2)
 estimated_delta<-(cor_estimated1-cor_estimated2)
 cor.test(True_delta,estimated_delta)
 dat<-data.frame(True_delta,estimated_delta)
-png(filename="./FigS6a",width=10,height=10,unit="in",res=600)
+png(filename="./FigS7a",width=10,height=10,unit="in",res=600)
 ggplot(dat,aes(x=True_delta,y=estimated_delta))+
   geom_point()+
   geom_smooth(method="lm")+
@@ -152,7 +152,7 @@ for(j in 1:10000){
 }
 
 dat<-data.frame(true_delta_e,estimate_delta_e)
-png(filename="./FigS6b",width=10,height=10,unit="in",res=600)
+png(filename="./FigS7b",width=10,height=10,unit="in",res=600)
 ggplot(dat,aes(x=true_delta_e,y=estimate_delta_e))+
   geom_point()+
   geom_smooth(method="lm")+
