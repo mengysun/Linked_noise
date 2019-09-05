@@ -31,7 +31,7 @@ wilcox.test(Divergent_tab$distance,Convergent_tab$distance)$p.value
 wilcox.test(Divergent_tab$cis_trans_dif,same_tab$cis_trans_dif)
 dat<-Mouse_cis_trans_samchr_tab_filtered[,c(23,21,24)]
 dat$orientation2<-ifelse(dat$orientation=="convergent","Convergent (n=108)",ifelse(dat$orientation=="divergent","Divergent (n=134)","Same (n=180)"))
-png(filename="FigS3",width=10,height=6,units="in",res=600)
+png(filename="FigS4",width=10,height=6,units="in",res=600)
 ggplot(dat, aes(x = orientation2, y = cis_trans_dif)) +
   geom_boxplot()+
   ylab(label=expression(italic(delta)[e]))+
