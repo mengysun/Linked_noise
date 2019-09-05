@@ -44,7 +44,7 @@ for(i in 1:100){
 plot(Distance,Cor)
 Dat<-data.frame(Distance/1000000,Cor)
 names(Dat)<-c("TSS_distance","CI")
-png(filename="FigS2a",width=10,height=6.18,units="in",res=600)
+png(filename="FigS3a",width=10,height=6.18,units="in",res=600)
 ggplot(Dat,aes(x=TSS_distance,y=CI))+
   geom_point()+
   geom_smooth(method="lm",se=FALSE)+
@@ -109,7 +109,7 @@ for(i in 1:100){
 plot(Distance,Cor)
 Dat<-data.frame(Distance/1000000,Cor)
 names(Dat)<-c("TSS_distance","CI")
-png(filename="FigS2a",width=10,height=6.18,units="in",res=600)
+png(filename="FigS3b",width=10,height=6.18,units="in",res=600)
 ggplot(Dat,aes(x=TSS_distance,y=CI))+
   geom_point()+
   geom_smooth(method="lm",se=FALSE)+
